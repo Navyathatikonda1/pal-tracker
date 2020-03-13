@@ -13,8 +13,11 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Build with Gradle
+    - name: change wrapper permission
       run: chmod +x ./gradlew build
+
+      name: Build with Gradle
+      run: /gradlew build
     - name: Publish artifact
       uses: actions/upload-artifact@v1
       with:

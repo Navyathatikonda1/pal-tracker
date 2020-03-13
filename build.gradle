@@ -49,6 +49,9 @@ dependencies {
     }
 
 }
+bootJar{
+    archiveName ="pal-tracker.jar"
+}
 test {
     useJUnitPlatform()
 }
