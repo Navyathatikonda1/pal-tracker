@@ -18,8 +18,7 @@ jobs:
         -name: change wapper permission
         run: sudo chmod +x gradlew && chmod +x ./gradlew build
 
-      -name: Build with Gradle
-      run: ./ gradlew build
+      
     - name: Publish artifact
       uses: actions/upload-artifact@v1
       with:
