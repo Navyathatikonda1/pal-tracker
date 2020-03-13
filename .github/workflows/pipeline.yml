@@ -14,14 +14,15 @@ jobs:
       with:
         java-version: 11
       -name: Build with Gradle
-      run: sudo chmod +x gradlew && ./gradlew build
-    - name: Publish artifact
-      uses: actions/upload-artifact@v1
-      with:
-        name: pal-tracker
-        path: build/libs/pal-tracker.jar
-
-  deploy:
+      run: sudo chmod +x gradlew && ./gradlew buil
+        - name: Build with Gradle
+        run: ./gradlew build
+      - name: Publish artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: pal-tracker
+          path: build/libs/pal-tracker.jar
+          deploy:
     needs: build-and-publish
     runs-on: ubuntu-latest
     steps:
