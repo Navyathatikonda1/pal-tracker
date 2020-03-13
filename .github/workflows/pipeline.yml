@@ -14,7 +14,12 @@ jobs:
       with:
         java-version: 11
       -name:  Change wrapper permissions
-      run: sudo chmod +x gradlew && ./gradlew buil
+      run: sudo chmod +x gradlew && ./gradlew build
+      - name: Create test database
+        run: |
+          mysql -uroot -proot < databases/tracker/create_databases.sql
+          ./gradlew testMigrate
+          
         - name: Build with Gradle
         run: ./gradlew build
       - name: Publish artifact
