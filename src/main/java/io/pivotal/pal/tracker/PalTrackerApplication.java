@@ -19,8 +19,8 @@ public class PalTrackerApplication {
         SpringApplication.run(PalTrackerApplication.class, args);//baa
     }
 
-   /*@Bean
-    TimeEntryRepository timeEntryRepository(){
+    @Bean
+    TimeEntryRepository timeEntryRepository() {
         return new InMemoryTimeEntryRepository();
     }
 
@@ -31,6 +31,7 @@ public class PalTrackerApplication {
                 .featuresToDisable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS) //ISODate
                 .modules(new JavaTimeModule())
                 .build();
-    }*/
 
+
+    }
 }
