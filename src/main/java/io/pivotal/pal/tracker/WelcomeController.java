@@ -15,4 +15,3 @@ public WelcomeController(@Value("${welcome.message}") String message){
         return message;
     }
 }
-//
