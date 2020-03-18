@@ -10,4 +10,3 @@ public interface TimeEntryRepository{
     TimeEntry update(Long id,TimeEntry timeEntry);
     void delete(Long id);
 }
-
